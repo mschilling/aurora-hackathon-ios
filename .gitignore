@@ -1,5 +1,14 @@
 
-# Created by https://www.gitignore.io/api/swift,xcode,firebase
+# Created by https://www.gitignore.io/api/swift,xcode,firebase,cocoapods
+
+### CocoaPods ###
+## CocoaPods GitIgnore Template
+
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a large number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+Pods/
+Podfile
 
 ### Firebase ###
 .idea
@@ -82,4 +91,4 @@ fastlane/test_output
 /*.gcno
 
 
-# End of https://www.gitignore.io/api/swift,xcode,firebase
+# End of https://www.gitignore.io/api/swift,xcode,firebase,cocoapods
