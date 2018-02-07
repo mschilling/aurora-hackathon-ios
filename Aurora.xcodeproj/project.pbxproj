@@ -10,6 +10,7 @@
 		1CBDFF74DB1AD4EFC321EE50 /* Pods_Aurora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA2FF37F2293901FFA1419 /* Pods_Aurora.framework */; };
 		7322DE622029B557008ADE9F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7322DE612029B557008ADE9F /* SwiftyJSON.framework */; };
 		7326DD302029B2A3008386CB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7326DD2F2029B2A3008386CB /* Alamofire.framework */; };
+		734DF1FF202AF24A00E9747E /* MapsViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734DF1FE202AF24A00E9747E /* MapsViewController2.swift */; };
 		73BF0B6D20299CA9009164AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF0B6C20299CA8009164AF /* MapKit.framework */; };
 		73BF0B6F20299EDD009164AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF0B6E20299EDD009164AF /* Foundation.framework */; };
 		73BF0B7120299EE4009164AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF0B7020299EE4009164AF /* UIKit.framework */; };
@@ -27,6 +28,7 @@
 		281CBBA6056771C9DD9F5977 /* Pods-Aurora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aurora.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aurora/Pods-Aurora.release.xcconfig"; sourceTree = "<group>"; };
 		7322DE612029B557008ADE9F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7326DD2F2029B2A3008386CB /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		734DF1FE202AF24A00E9747E /* MapsViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController2.swift; sourceTree = "<group>"; };
 		73BF0B6C20299CA8009164AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		73BF0B6E20299EDD009164AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		73BF0B7020299EE4009164AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -109,6 +111,7 @@
 				73EB84E72024BEC400ADB8FE /* Info.plist */,
 				73F8B86820286AAF003F6251 /* GoogleService-Info.plist */,
 				73E6D9B42028A1AE005F2373 /* MapsViewController.swift */,
+				734DF1FE202AF24A00E9747E /* MapsViewController2.swift */,
 			);
 			path = Aurora;
 			sourceTree = "<group>";
@@ -219,15 +222,29 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Aurora/Pods-Aurora-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +281,7 @@
 			files = (
 				73E6D9B52028A1AE005F2373 /* MapsViewController.swift in Sources */,
 				73EB84DE2024BEC200ADB8FE /* ViewController.swift in Sources */,
+				734DF1FF202AF24A00E9747E /* MapsViewController2.swift in Sources */,
 				73EB84DC2024BEC200ADB8FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +429,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YQ62CYT4B3;
 				INFOPLIST_FILE = Aurora/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,6 +452,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YQ62CYT4B3;
 				INFOPLIST_FILE = Aurora/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

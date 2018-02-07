@@ -13,12 +13,12 @@ import Alamofire
 import SwiftyJSON
 
 class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var GetPOIButton: UIBarButtonItem!
-
+    
     var locationManager: CLLocationManager!
+    var firstLaunch = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,30 +35,22 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
         
-
         mapView.delegate = self
         mapView.mapType = MKMapType(rawValue: 0)!
         mapView.showsUserLocation = true
-        let mapCamera = MKMapCamera()
-        mapCamera.centerCoordinate = mapView.userLocation.coordinate
-        mapCamera.pitch = 45
-        mapCamera.altitude = 500 // example altitude
-        mapCamera.heading = 45
-        
-        // set the camera property
-        mapView.camera = mapCamera
-        
-        
-       
-    
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
-    let center = self.mapView.userLocation.coordinate
-        let region = MKCoordinateRegionMake(center, MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
-        mapView.setRegion(region, animated: true)
-        mapView.centerCoordinate = self.mapView.userLocation.coordinate
+        
+         let location = locations.first!
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
+        if firstLaunch {
+            mapView.setRegion(coordinateRegion, animated: true)
+            firstLaunch = false
+        } else {
+            mapView.setRegion(coordinateRegion, animated: false)
+        }
+        
         
     }
     
@@ -87,14 +79,12 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
                     pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
                     self.mapView.addAnnotation(pinAnnotationView.annotation!)
                     
-                    print(item["geoLocation"] as Any)
+                    //print(item["geoLocation"] as Any)
                 }
             }
     
         }
     }
-
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

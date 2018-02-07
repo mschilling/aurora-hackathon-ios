@@ -29,7 +29,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
+        let status = CLLocationManager.authorizationStatus()
+        if status == .notDetermined || status == .denied || status == .authorizedWhenInUse {
+            
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+        }
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         
