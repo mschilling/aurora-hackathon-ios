@@ -91,20 +91,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vG-9c-KT6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-WQ-Zvh">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="GET POINTS OF INTEREST" id="5PU-SN-2ga">
+                                    <barButtonItem title="POI (REST)" id="5PU-SN-2ga">
                                         <connections>
                                             <action selector="getPOI" destination="Rmd-cj-nBk" id="vdL-Wf-ZKh"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" id="CJj-lc-aHl">
+                                        <view key="customView" contentMode="scaleToFill" id="BDI-4k-FsE">
+                                            <rect key="frame" x="112.5" y="5.5" width="115" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Focus on user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGQ-Gv-mBf">
+                                                    <rect key="frame" x="4" y="4" width="108" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.97592383623123169" green="0.97666221857070923" blue="0.97603815793991089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="RTn-yg-519">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KFc-MR-828">
+                                            <rect key="frame" x="227.5" y="6.5" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </switch>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="3kF-u2-hdq">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MMD-ed-LPw">
+                                            <rect key="frame" x="278.5" y="7" width="73" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="&gt;"/>
+                                            <connections>
+                                                <segue destination="Qc0-CN-C8I" kind="show" id="Ij4-HZ-wYw"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vG-9c-KT6">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -117,12 +149,54 @@
                     </view>
                     <connections>
                         <outlet property="GetPOIButton" destination="5PU-SN-2ga" id="UO9-aU-1nD"/>
+                        <outlet property="Toggle" destination="KFc-MR-828" id="fkw-rO-Occ"/>
                         <outlet property="mapView" destination="5vG-9c-KT6" id="l16-ki-Vpe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqd-0r-0go" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1696.8" y="206.44677661169416"/>
+        </scene>
+        <!--Maps View Controller2-->
+        <scene sceneID="dib-gO-J6a">
+            <objects>
+                <viewController id="Qc0-CN-C8I" customClass="MapsViewController2" customModule="Aurora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ovW-JY-YtL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-d3-e7B">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="waB-V8-zeU">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="POI (FIRESTORE)" width="200" id="kes-kB-izG">
+                                        <connections>
+                                            <action selector="getPointsOfInterestFireStore" destination="Qc0-CN-C8I" id="LUl-4u-ZEM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OJG-d3-e7B" firstAttribute="leading" secondItem="Koq-fi-ZSq" secondAttribute="leading" id="15H-cC-8p6"/>
+                            <constraint firstItem="OJG-d3-e7B" firstAttribute="top" secondItem="Koq-fi-ZSq" secondAttribute="top" id="T32-CQ-AFf"/>
+                            <constraint firstItem="Koq-fi-ZSq" firstAttribute="trailing" secondItem="OJG-d3-e7B" secondAttribute="trailing" id="oXF-C4-a4A"/>
+                            <constraint firstItem="Koq-fi-ZSq" firstAttribute="bottom" secondItem="OJG-d3-e7B" secondAttribute="bottom" constant="44" id="vXa-ED-JWp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Koq-fi-ZSq"/>
+                    </view>
+                    <connections>
+                        <outlet property="GetPOIFirebaseButton" destination="kes-kB-izG" id="rN1-EV-m9Q"/>
+                        <outlet property="mapViewSDK" destination="OJG-d3-e7B" id="uVe-bE-Brt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuK-kR-cnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2368.8000000000002" y="205.54722638680661"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E28-Xr-kIg">
