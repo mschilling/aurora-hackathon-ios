@@ -17,6 +17,9 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var GetPOIButton: UIBarButtonItem!
     
+    @IBOutlet weak var Toggle: UISwitch!
+    
+    
     var locationManager: CLLocationManager!
     var firstLaunch = true
     
@@ -42,16 +45,20 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-         let location = locations.first!
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
-        if firstLaunch {
-            mapView.setRegion(coordinateRegion, animated: true)
-            firstLaunch = false
+        if (Toggle.isOn){
+    
+            let location = locations.first!
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,  300, 300)
+        
+            if firstLaunch {
+                mapView.setRegion(coordinateRegion, animated: true)
+                firstLaunch = false
+            } else {
+                mapView.setRegion(coordinateRegion, animated: false)
+            }
         } else {
-            mapView.setRegion(coordinateRegion, animated: false)
+
         }
-        
-        
     }
     
     @IBAction func getPOI(){
@@ -78,11 +85,8 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
                    
                     pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
                     self.mapView.addAnnotation(pinAnnotationView.annotation!)
-                    
-                    //print(item["geoLocation"] as Any)
                 }
             }
-    
         }
     }
     
@@ -90,9 +94,6 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-   
-    
 }
 
 
