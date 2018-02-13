@@ -8,10 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		1CBDFF74DB1AD4EFC321EE50 /* Pods_Aurora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA2FF37F2293901FFA1419 /* Pods_Aurora.framework */; };
-		7322DE622029B557008ADE9F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7322DE612029B557008ADE9F /* SwiftyJSON.framework */; };
+		730E8A30202D91AA00DFEC92 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E8A2F202D91AA00DFEC92 /* LocationViewController.swift */; };
 		7326DD302029B2A3008386CB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7326DD2F2029B2A3008386CB /* Alamofire.framework */; };
+		733E6C5F202C5D2E0041A71E /* ArKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E6C5E202C5D2E0041A71E /* ArKitViewController.swift */; };
+		7342184F202DAB88004A5ADF /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73421845202DAB86004A5ADF /* SCNVector3+Extensions.swift */; };
+		73421850202DAB88004A5ADF /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73421846202DAB86004A5ADF /* FloatingPoint+Radians.swift */; };
+		73421851202DAB88004A5ADF /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73421847202DAB87004A5ADF /* SceneLocationEstimate+Extensions.swift */; };
+		73421852202DAB88004A5ADF /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73421848202DAB87004A5ADF /* SceneLocationView.swift */; };
+		73421853202DAB88004A5ADF /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73421849202DAB87004A5ADF /* SCNNode+Extensions.swift */; };
+		73421854202DAB88004A5ADF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342184A202DAB87004A5ADF /* LocationManager.swift */; };
+		73421855202DAB88004A5ADF /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342184B202DAB87004A5ADF /* CGPoint+Extensions.swift */; };
+		73421856202DAB88004A5ADF /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342184C202DAB88004A5ADF /* CLLocation+Extensions.swift */; };
+		73421857202DAB88004A5ADF /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342184D202DAB88004A5ADF /* SceneLocationEstimate.swift */; };
+		73421858202DAB88004A5ADF /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342184E202DAB88004A5ADF /* LocationNode.swift */; };
+		734C582C202C846E00C4E457 /* Tower3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 734C582B202C846E00C4E457 /* Tower3.dae */; };
+		734C5831202C8DE900C4E457 /* model.dae in Resources */ = {isa = PBXBuildFile; fileRef = 734C582F202C8DE900C4E457 /* model.dae */; };
+		734C5832202C8DE900C4E457 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 734C5830202C8DE900C4E457 /* textures */; };
+		734C5836202C94E300C4E457 /* earthtruecolor_nasa_big.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 734C5835202C94E200C4E457 /* earthtruecolor_nasa_big.jpg */; };
 		734DF1FF202AF24A00E9747E /* MapsViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734DF1FE202AF24A00E9747E /* MapsViewController2.swift */; };
 		739B555C202C458500CC743E /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739B555B202C458400CC743E /* Pin.swift */; };
+		73B8D2E6202DA70C00519A25 /* ARCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8D2E5202DA70C00519A25 /* ARCL.framework */; };
 		73BF0B6D20299CA9009164AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF0B6C20299CA8009164AF /* MapKit.framework */; };
 		73BF0B6F20299EDD009164AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF0B6E20299EDD009164AF /* Foundation.framework */; };
 		73BF0B7120299EE4009164AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF0B7020299EE4009164AF /* UIKit.framework */; };
@@ -27,10 +43,28 @@
 
 /* Begin PBXFileReference section */
 		281CBBA6056771C9DD9F5977 /* Pods-Aurora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aurora.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aurora/Pods-Aurora.release.xcconfig"; sourceTree = "<group>"; };
+		730E8A2F202D91AA00DFEC92 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		730E8A34202D944900DFEC92 /* ARCL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ARCL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7322DE612029B557008ADE9F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7326DD2F2029B2A3008386CB /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		733E6C5E202C5D2E0041A71E /* ArKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArKitViewController.swift; sourceTree = "<group>"; };
+		73421845202DAB86004A5ADF /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		73421846202DAB86004A5ADF /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
+		73421847202DAB87004A5ADF /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
+		73421848202DAB87004A5ADF /* SceneLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
+		73421849202DAB87004A5ADF /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		7342184A202DAB87004A5ADF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		7342184B202DAB87004A5ADF /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		7342184C202DAB88004A5ADF /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		7342184D202DAB88004A5ADF /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLocationEstimate.swift; sourceTree = "<group>"; };
+		7342184E202DAB88004A5ADF /* LocationNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
+		734C582B202C846E00C4E457 /* Tower3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Tower3.dae; path = ../../../Downloads/Tower3.dae; sourceTree = "<group>"; };
+		734C582F202C8DE900C4E457 /* model.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = model.dae; path = "../../../Downloads/desert-buggy/source/model/model.dae"; sourceTree = "<group>"; };
+		734C5830202C8DE900C4E457 /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = textures; path = "../../../Downloads/desert-buggy/source/model/textures"; sourceTree = "<group>"; };
+		734C5835202C94E200C4E457 /* earthtruecolor_nasa_big.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = earthtruecolor_nasa_big.jpg; path = ../../../Downloads/earthtruecolor_nasa_big.jpg; sourceTree = "<group>"; };
 		734DF1FE202AF24A00E9747E /* MapsViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController2.swift; sourceTree = "<group>"; };
 		739B555B202C458400CC743E /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		73B8D2E5202DA70C00519A25 /* ARCL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ARCL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BF0B6C20299CA8009164AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		73BF0B6E20299EDD009164AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		73BF0B7020299EE4009164AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -55,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7322DE622029B557008ADE9F /* SwiftyJSON.framework in Frameworks */,
+				73B8D2E6202DA70C00519A25 /* ARCL.framework in Frameworks */,
 				7326DD302029B2A3008386CB /* Alamofire.framework in Frameworks */,
 				73BF0B7120299EE4009164AF /* UIKit.framework in Frameworks */,
 				73BF0B6F20299EDD009164AF /* Foundation.framework in Frameworks */,
@@ -71,6 +105,8 @@
 		5AC24567F3C068F17DDFFD80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73B8D2E5202DA70C00519A25 /* ARCL.framework */,
+				730E8A34202D944900DFEC92 /* ARCL.framework */,
 				7322DE612029B557008ADE9F /* SwiftyJSON.framework */,
 				7326DD2F2029B2A3008386CB /* Alamofire.framework */,
 				73BF0B7020299EE4009164AF /* UIKit.framework */,
@@ -82,6 +118,35 @@
 				B5FA2FF37F2293901FFA1419 /* Pods_Aurora.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		730E8A31202D930B00DFEC92 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				730E8A2F202D91AA00DFEC92 /* LocationViewController.swift */,
+				73EB84DD2024BEC200ADB8FE /* ViewController.swift */,
+				73E6D9B42028A1AE005F2373 /* MapsViewController.swift */,
+				734DF1FE202AF24A00E9747E /* MapsViewController2.swift */,
+				733E6C5E202C5D2E0041A71E /* ArKitViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		73421859202DACB1004A5ADF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7342184B202DAB87004A5ADF /* CGPoint+Extensions.swift */,
+				7342184C202DAB88004A5ADF /* CLLocation+Extensions.swift */,
+				73421846202DAB86004A5ADF /* FloatingPoint+Radians.swift */,
+				7342184A202DAB87004A5ADF /* LocationManager.swift */,
+				7342184E202DAB88004A5ADF /* LocationNode.swift */,
+				7342184D202DAB88004A5ADF /* SceneLocationEstimate.swift */,
+				73421847202DAB87004A5ADF /* SceneLocationEstimate+Extensions.swift */,
+				73421848202DAB87004A5ADF /* SceneLocationView.swift */,
+				73421849202DAB87004A5ADF /* SCNNode+Extensions.swift */,
+				73421845202DAB86004A5ADF /* SCNVector3+Extensions.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		73EB84CF2024BEC200ADB8FE = {
@@ -105,15 +170,18 @@
 		73EB84DA2024BEC200ADB8FE /* Aurora */ = {
 			isa = PBXGroup;
 			children = (
+				73421859202DACB1004A5ADF /* Source */,
+				730E8A31202D930B00DFEC92 /* Controllers */,
+				734C582B202C846E00C4E457 /* Tower3.dae */,
+				734C582F202C8DE900C4E457 /* model.dae */,
+				734C5835202C94E200C4E457 /* earthtruecolor_nasa_big.jpg */,
+				734C5830202C8DE900C4E457 /* textures */,
 				73EB84DB2024BEC200ADB8FE /* AppDelegate.swift */,
-				73EB84DD2024BEC200ADB8FE /* ViewController.swift */,
 				73EB84DF2024BEC200ADB8FE /* Main.storyboard */,
 				73EB84E22024BEC400ADB8FE /* Assets.xcassets */,
 				73EB84E42024BEC400ADB8FE /* LaunchScreen.storyboard */,
 				73EB84E72024BEC400ADB8FE /* Info.plist */,
 				73F8B86820286AAF003F6251 /* GoogleService-Info.plist */,
-				73E6D9B42028A1AE005F2373 /* MapsViewController.swift */,
-				734DF1FE202AF24A00E9747E /* MapsViewController2.swift */,
 				739B555B202C458400CC743E /* Pin.swift */,
 			);
 			path = Aurora;
@@ -189,9 +257,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734C5832202C8DE900C4E457 /* textures in Resources */,
 				73EB84E62024BEC400ADB8FE /* LaunchScreen.storyboard in Resources */,
 				73F8B86920286AAF003F6251 /* GoogleService-Info.plist in Resources */,
+				734C5836202C94E300C4E457 /* earthtruecolor_nasa_big.jpg in Resources */,
+				734C5831202C8DE900C4E457 /* model.dae in Resources */,
 				73EB84E32024BEC400ADB8FE /* Assets.xcassets in Resources */,
+				734C582C202C846E00C4E457 /* Tower3.dae in Resources */,
 				73EB84E12024BEC200ADB8FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,11 +296,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Aurora/Pods-Aurora-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -238,11 +310,11 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARCL.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -282,11 +354,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73421855202DAB88004A5ADF /* CGPoint+Extensions.swift in Sources */,
+				73421856202DAB88004A5ADF /* CLLocation+Extensions.swift in Sources */,
+				73421853202DAB88004A5ADF /* SCNNode+Extensions.swift in Sources */,
+				73421858202DAB88004A5ADF /* LocationNode.swift in Sources */,
+				73421852202DAB88004A5ADF /* SceneLocationView.swift in Sources */,
+				730E8A30202D91AA00DFEC92 /* LocationViewController.swift in Sources */,
 				739B555C202C458500CC743E /* Pin.swift in Sources */,
 				73E6D9B52028A1AE005F2373 /* MapsViewController.swift in Sources */,
+				73421851202DAB88004A5ADF /* SceneLocationEstimate+Extensions.swift in Sources */,
+				7342184F202DAB88004A5ADF /* SCNVector3+Extensions.swift in Sources */,
+				73421857202DAB88004A5ADF /* SceneLocationEstimate.swift in Sources */,
+				733E6C5F202C5D2E0041A71E /* ArKitViewController.swift in Sources */,
 				73EB84DE2024BEC200ADB8FE /* ViewController.swift in Sources */,
 				734DF1FF202AF24A00E9747E /* MapsViewController2.swift in Sources */,
 				73EB84DC2024BEC200ADB8FE /* AppDelegate.swift in Sources */,
+				73421850202DAB88004A5ADF /* FloatingPoint+Radians.swift in Sources */,
+				73421854202DAB88004A5ADF /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +517,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YQ62CYT4B3;
 				INFOPLIST_FILE = Aurora/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +540,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YQ62CYT4B3;
 				INFOPLIST_FILE = Aurora/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

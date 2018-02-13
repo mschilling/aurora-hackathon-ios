@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 import CoreLocation
 import Alamofire
-import SwiftyJSON
 
 class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     

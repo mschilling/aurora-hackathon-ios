@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14075.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0Y-JV-dGV">
-                                <rect key="frame" x="121" y="318" width="133" height="30"/>
+                                <rect key="frame" x="121" y="318.5" width="133" height="30"/>
                                 <state key="normal" title="GET MY LOCATION"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slf-b9-BYX">
@@ -56,6 +55,14 @@
                                 <state key="normal" title="GO TO MAP"/>
                                 <connections>
                                     <segue destination="Rmd-cj-nBk" kind="show" id="XQ0-zs-WRq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxO-7s-wae">
+                                <rect key="frame" x="149" y="429" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GoToArMap"/>
+                                <connections>
+                                    <segue destination="Ht8-GN-SOW" kind="show" id="iA0-Bo-Eeh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,7 +88,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="208"/>
+            <point key="canvasLocation" x="984.79999999999995" y="207.34632683658174"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="hIm-52-bjC">
+            <objects>
+                <viewController id="Ht8-GN-SOW" customClass="LocationViewController" customModule="Aurora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4up-aW-wow">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BJ-8a-qBf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="323"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nOp-X9-Rwo">
+                                <rect key="frame" x="0.0" y="386" width="375" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mZs-4n-waX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4y-GE-MNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984.79999999999995" y="897.30134932533736"/>
         </scene>
         <!--Maps View Controller-->
         <scene sceneID="MZx-55-A2y">
@@ -177,6 +209,16 @@
                                             <action selector="getPointsOfInterestFireStore" destination="Qc0-CN-C8I" id="LUl-4u-ZEM"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" id="Q95-L2-iXo">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qQh-2d-h7z">
+                                            <rect key="frame" x="216" y="7" width="132" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="&gt;"/>
+                                            <connections>
+                                                <segue destination="HOH-Xr-2gF" kind="show" id="TOu-By-8pg"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -197,6 +239,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuK-kR-cnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2368.8000000000002" y="205.54722638680661"/>
+        </scene>
+        <!--Ar Kit View Controller-->
+        <scene sceneID="Mqu-NQ-cBF">
+            <objects>
+                <viewController id="HOH-Xr-2gF" customClass="ArKitViewController" customModule="Aurora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="la5-mb-eUF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OO8-pX-kAz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OO8-pX-kAz" firstAttribute="top" secondItem="1NC-Kc-N1G" secondAttribute="top" id="Fb5-6j-J1i"/>
+                            <constraint firstItem="1NC-Kc-N1G" firstAttribute="bottom" secondItem="OO8-pX-kAz" secondAttribute="bottom" id="Xcf-0n-q3h"/>
+                            <constraint firstItem="OO8-pX-kAz" firstAttribute="leading" secondItem="1NC-Kc-N1G" secondAttribute="leading" id="pka-eL-qsT"/>
+                            <constraint firstItem="1NC-Kc-N1G" firstAttribute="trailing" secondItem="OO8-pX-kAz" secondAttribute="trailing" id="u4u-pd-sld"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1NC-Kc-N1G"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="OO8-pX-kAz" id="wUc-Rx-YPk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NTR-rb-YAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3044" y="205.54722638680661"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E28-Xr-kIg">

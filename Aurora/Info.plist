@@ -48,5 +48,9 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location to show you places nearby</string>
+	<key>NSCameraUsageDescription</key>
+	<string>For Augmented Reality</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoianVsaWFudmVsZCIsImEiOiJjamRlbzQyZ2YwZDk2MndxbThnNDV2MXJqIn0.LxflyAhqEZJLTpftCXnvIQ</string>
 </dict>
 </plist>

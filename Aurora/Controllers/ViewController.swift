@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
 
     
+    @IBOutlet weak var GoToAR: UIButton!
     @IBOutlet weak var LatitudeLabel: UILabel!
     @IBOutlet weak var LongitudeLabel: UILabel!
     @IBOutlet weak var GetLocationButton: UIButton!

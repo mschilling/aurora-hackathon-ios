@@ -11,7 +11,6 @@ import MapKit
 import CoreLocation
 import Alamofire
 import FirebaseFirestore
-import SwiftyJSON
 
 class MapsViewController2: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -78,8 +77,6 @@ class MapsViewController2: UIViewController, CLLocationManagerDelegate, MKMapVie
                         
                     }
                     if (diff.type == .modified) {
-                        let allAnnotations = self.mapViewSDK.annotations
-                        self.mapViewSDK.removeAnnotations(allAnnotations)
                         self.getPointsOfInterestFireStore()
                     }
                     if (diff.type == .removed) {
@@ -91,7 +88,8 @@ class MapsViewController2: UIViewController, CLLocationManagerDelegate, MKMapVie
     
     
     @IBAction func getPointsOfInterestFireStore(){
-        
+        let allAnnotations = self.mapViewSDK.annotations
+        self.mapViewSDK.removeAnnotations(allAnnotations)
         
         for pin in pinArray{
             let annotation = MKPointAnnotation()
